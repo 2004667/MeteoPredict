@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: weatherappproj
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: API_KEY
+        value: apiKey  # Замените на ваши переменные окружения
+    branch: main
